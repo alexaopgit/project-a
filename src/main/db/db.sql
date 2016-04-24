@@ -1,7 +1,9 @@
-create database test_aop;
-use test_aop;
 #задача: есть магазины и продукты. необхдоимо найти все магазины и продукты в них, где есть продукты
 # у которых срок годности истекает позже указанной даты и в радиусе 10км
+
+create database test_aop;
+use test_aop;
+
 create table shop_t(
   id int(10) not null auto_increment,
   name varchar(400) comment 'shop name',
