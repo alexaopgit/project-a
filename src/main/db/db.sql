@@ -1,5 +1,5 @@
-#задача: есть магазины и продукты. необхдоимо найти все магазины и продукты в них, где есть продукты
-# у которых срок годности истекает позже указанной даты и в радиусе 10км
+#задача: есть магазины и продукты. необходимо найти все магазины и продукты в них, где есть продукты
+# у которых срок годности истекает позже указанной даты и в радиусе X км
 
 create database test_aop;
 use test_aop;
@@ -91,6 +91,12 @@ insert into product_supply_t(best_before_dt, shop__product_id) values (STR_TO_DA
 
 -- sql query gives as a list of products and shops which are X rm not further away from specified
 -- location and contains products with best before date bigger than Y
+
+-- parameters:
+--  current latitude = 55.504
+--  current longitude = -1
+--  search radius = 10
+--  best_before_dt = '2016-04-26'
 
 SELECT st.id, st.name, pt.name,
   (
